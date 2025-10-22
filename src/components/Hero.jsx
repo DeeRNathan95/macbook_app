@@ -16,7 +16,8 @@ const Hero = () => {
 
             <video ref={videoRef} src="/videos/hero.mp4" autoPlay muted playsInline />
 
-            <button> Buy </button>
+
+            <button>BUY</button>
             <p>Buy 1955</p>
         </section>
 
