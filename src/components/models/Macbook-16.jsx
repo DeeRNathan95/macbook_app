@@ -20,7 +20,7 @@ export default function MacbookModel16(props) {
     const { nodes, materials, scene } = useGLTF('/models/macbook-16.glb')
 
     const texture = useTexture('/screen.png');
-    texture.ColorSpace = SRGBColorSpace;
+    texture.colorSpace = SRGBColorSpace;
     texture.needsUpdate = true;
 
 
