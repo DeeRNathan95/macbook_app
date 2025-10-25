@@ -1,6 +1,6 @@
 import React from 'react'
 import {Environment, Lightformer} from "@react-three/drei";
-import App from "../App.jsx";
+import App from "../../App.jsx";
 
 const StudioLights = () => {
     return (
