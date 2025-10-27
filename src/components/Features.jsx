@@ -16,7 +16,7 @@ const ModelScroll = () => {
     const isMobile = useMediaQuery( { query: '(max-width: 600px)' } )
     const { setTexture } = useMacbookStore();
 
-    //pre=load all feature videos during component mount.
+    //Preload all feature videos during component mount.
     useEffect(() => {
         featureSequence.forEach((feature) => {
             const v = document.createElement('video');
@@ -78,7 +78,7 @@ const ModelScroll = () => {
             .to('.box4', {opacity: 1, y: 0})
 
             .call(() => setTexture('/videos/feature-5.mp4'))
-            .to('.box5 ', {opacity: 1, y: 0 })
+            .to('.box5', {opacity: 1, y: 0 })
 
     }, []);
 
