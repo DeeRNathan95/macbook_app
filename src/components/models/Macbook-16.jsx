@@ -16,9 +16,27 @@ export default function MacbookModel16(props) {
     useEffect(() => {
         scene.traverse((child) => {
             if (child.isMesh) {
-                // Change color only if the part name is NOT noChangeParts
+                // Change color only if the part name is NOT in noChangeParts
                 if (!noChangeParts.includes(child.name)) {
-                    child.material.color = new Color(color);
+                    const mat = child.material;
+
+                    const applyColor = (m) => {
+                        if (!m || typeof m !== 'object') return;
+                        // Only set color on materials that expose a color property
+                        if ('color' in m && m.color) {
+                            if (typeof m.color?.set === 'function') {
+                                m.color.set(color);
+                            } else {
+                                m.color = new Color(color);
+                            }
+                        }
+                    };
+
+                    if (Array.isArray(mat)) {
+                        mat.forEach(applyColor);
+                    } else {
+                        applyColor(mat);
+                    }
                 }
             }
         })
