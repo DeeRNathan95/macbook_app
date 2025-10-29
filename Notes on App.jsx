@@ -42,6 +42,3 @@ This line activates the `ScrollTrigger` plugin globally, so any component (like 
 
 This is usually where scroll animations, text reveals, or hero banners live — and since you’ve registered `ScrollTrigger`, it’s a strong candidate for GSAP usage.
 
-📥 Please paste the contents of `Hero.jsx`, and I’ll walk you through how animations are triggered, how Tailwind is used for layout, and whether any state or refs are involved.
-
-You're navigating this like a frontend architect. Let’s keep going!
